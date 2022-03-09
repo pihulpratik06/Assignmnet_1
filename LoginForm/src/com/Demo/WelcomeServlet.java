@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,10 +34,15 @@ public class WelcomeServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		 
+		
+		
 		String username=request.getParameter("uname");
  
-		out.println("Welcome::"+username);
+	   out.println("Welcome::"+username);
+	   Cookie c[]=request.getCookies();
 	   
+	   out.println("<h3>Welcome "+c[0].getValue()+"</h3>");
+		out.println("Max age::"+c[0].getMaxAge());
 		out.println("<a href='ByeServlet'>Bye</a>");
 	
 	}

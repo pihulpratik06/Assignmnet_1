@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,6 +37,12 @@ public class LoginFormDemo extends HttpServlet {
       
         String pass=request.getParameter("pwd");
       
+        
+        Cookie c=new Cookie("uname",uname);
+         c.setMaxAge(3000);
+        response.addCookie(c);
+        
+        
          if(uname.equals(pass)) {
         	  
         	 out.println("<h1>Right Credential</h1>");

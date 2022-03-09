@@ -1,3 +1,5 @@
+//Cookie
+
 package com.Demo;
 
 import java.io.IOException;
@@ -5,6 +7,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,10 +32,15 @@ public class ByeServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
         
-		response.setContentType("html/text");
+		response.setContentType("text/html");
 	 PrintWriter out=response.getWriter();
-	 
-	 response.sendRedirect("https://www.google.com");
+	  Cookie c[]=request.getCookies();
+	   
+	   out.println("Bye::"+c[0].getValue());
+		
+	
+	
+//	response.sendRedirect("https://www.google.com");
 	
 	
 	}
