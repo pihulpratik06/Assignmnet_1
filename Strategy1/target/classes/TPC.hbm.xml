@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name = "com.bean.Employee" table = "EmployeeTPC"   >
+
+
+        <id name = "id" >
+            <generator class="assigned"/>
+        </id>
+
+        <property name = "name" />
+        
+        <union-subclass  name="com.bean.PartTimeEmp" table="TPC_PEMP">
+            
+            <property name="no_of_hrs" column="PEMP_NO_OF_HRS"/>
+            <property name="hrs_per_sal" column="PEMP_HRS_PER_SAL"/>
+        </union-subclass>
+
+        <union-subclass  name="com.bean.FullTimeEmp" table="TPC_FEMP">
+
+            <property name="sal" column="FEMP_SAL"/>
+            <property name="extra_hrs" column="FEMP_EXTRA_HRS"/>
+            <property name="extra_sal" column="FEMP_EXTRA_SAL"/>
+
+        </union-subclass>
+
+    </class>
+</hibernate-mapping>
