@@ -5,15 +5,7 @@ public class Shape {
  private Triangle triangle;
  private  Circle circle;
 
-    public Rectangle getRectangle() {
-        return rectangle;
-    }
 
-    public void setRectangle(Rectangle rectangle) {
-        this.rectangle = rectangle;
-    }
-
-    private  Rectangle rectangle;
     public Triangle getTriangle() {
         return triangle;
     }
@@ -33,7 +25,7 @@ public class Shape {
     public  void display(){
          getCircle().display();
          getTriangle().display();
-         getRectangle().display();
+
 
     }
 }

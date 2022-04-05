@@ -21,13 +21,9 @@
          <property name="pointB" ref="p2"/>
          <property name="pointC" ref="p3"/>
 
-    </bean>    <bean id="rectangle" class="com.bean.Rectangle">
-         <property name="pointA" ref="p1"/>
-         <property name="pointB" ref="p2"/>
-         <property name="pointC" ref="p3"/>
-
     </bean>
 
+  
     <bean id="circle" class="com.bean.Circle">
 
         <property name="radius" value="3.4"/>
