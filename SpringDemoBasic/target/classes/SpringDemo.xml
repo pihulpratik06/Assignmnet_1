@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="tri" class="com.bean.Triangle">
+         <property name="h" value="2"/>
+         <property name="v" value="2"/>
+         <property name="type" value="Right Angle Triangle"/>
+
+
+
+    </bean>
+
+</beans>
