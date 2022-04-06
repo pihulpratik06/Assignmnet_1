@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="batch" class="com.bean.Batch">
+        <property name="batchID" value="1"/>
+        <property name="noOfStud" value="101"/>
+        <property name="students">
+            <list >
+                <bean id="students" class="com.bean.Students">
+                    <property name="name" value="Pratik"/>
+                    <property name="studentID" value="1"/>
+                    <property name="percentage" value="89.55"/>
+                    <property name="degree" value="BSc"/>
+                </bean>
+                <bean id="students1" class="com.bean.Students">
+                    <property name="name" value="Shubham"/>
+                    <property name="studentID" value="2"/>
+                    <property name="percentage" value="79.55"/>
+                    <property name="degree" value="BTech"/>
+                </bean>
+
+
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>

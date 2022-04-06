@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean class="com.bean.Singer" id="singer">
+     <property name="singerName" value="Arijit Singh"/>
+     <property name="singerBirthday" value="6th June 1990"/>
+     <property name="age" value="30"/>
+   <property name="songList">
+
+       <list>
+
+            <value>Phir Kabhi</value>
+            <value>Mere Ashique</value>
+            <value>Desh Mere</value>
+            <value>Bandheya</value>
+            <value>Jaan Nisar</value>
+            <value>Qafirana</value>
+
+
+
+       </list>
+
+
+
+
+   </property>
+</bean>
+</beans>
