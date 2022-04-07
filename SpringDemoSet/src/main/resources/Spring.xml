@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="director" class="com.bean.Director">
+        <property  name="id" value="1"/>
+        <property  name="directorName" value="Rajkumar Hirani"/>
+        <property name="movieSet">
+            <set>
+                <ref bean="m1"/>
+                <ref bean="m2"/>
+            </set>
+        </property>
+    </bean>
+    <bean id="m1" class="com.bean.Movie">
+        <property name="id" value="101"/>
+        <property name="movieName" value="3 idiots"/>
+        <property name="actor" value="Amir Khan"/>
+        <property name="actress" value="Kareena Kapoor"/>
+    </bean>
+     <bean id="m2" class="com.bean.Movie">
+        <property name="id" value="102"/>
+        <property name="movieName" value="Sanju"/>
+        <property name="actor" value="Ranbir Kapoor"/>
+        <property name="actress" value="Dont know"/>
+    </bean>
+
+
+
+</beans>
